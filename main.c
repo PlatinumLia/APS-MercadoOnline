@@ -35,9 +35,7 @@ void cadastrarProduto()
         scanf("%f", &p.preco);
         estoque[total_produtos++] = p;
         printf("Produto cadastrado com sucesso!\n");
-    } 
-    else 
-    {
+    } else {
         printf("Estoque cheio!\n");
     }
 }
@@ -45,8 +43,7 @@ void cadastrarProduto()
 void listarProdutos() 
 {
     printf("Produtos cadastrados:\n");
-    for (int i = 0; i < total_produtos; i++) 
-    {
+    for (int i = 0; i < total_produtos; i++) {
         printf("Codigo: %d, Nome: %s, Preco: %.2f\n", estoque[i].codigo, estoque[i].nome, estoque[i].preco);
     }
 }
@@ -61,8 +58,7 @@ void comprarProduto()
 
     for (int i = 0; i < total_produtos; i++) 
     {
-        if (estoque[i].codigo == codigo) 
-        {
+        if (estoque[i].codigo == codigo) {
             carrinho[total_itens_carrinho].produto = estoque[i];
             carrinho[total_itens_carrinho].quantidade = quantidade;
             total_itens_carrinho++;
